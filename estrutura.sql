@@ -31,6 +31,7 @@ create table lancamentos(
   His_Codigo INTEGER,
   Cat_Codigo INTEGER,
   SbCat_Codigo INTEGER,
+  Lan_DataHoraLcto DATETIME,
   Lan_Valor DOUBLE,
   FOREIGN KEY (Con_Codigo) REFERENCES Contas(Con_Codigo),
   FOREIGN KEY (His_Codigo) REFERENCES Historicos(His_Codigo),
@@ -38,3 +39,4 @@ create table lancamentos(
   FOREIGN KEY (Cat_Codigo, SbCat_Codigo) REFERENCES SubCategorias(Cat_Codigo, SbCat_Codigo),
   PRIMARY KEY (Lan_Codigo)
 );
+
